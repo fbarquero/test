@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="ngBoilerplate" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome from BootstrapCDN -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+  </head>
+  <body>
+
+
+  <section id="container">
+      <div class="row" id="mainHeader">
+          <!--<div class="col-md-4 ">Campeonato de Taekwondo San Carlos</div>
+          <div class="col-md-8">
+              <div class="pull-right">v 1.0</div>
+          </div>-->
+          <p class="navbar-text">Campeonato de Taekwondo San Carlos</p>
+          </div>
+      <div class="row">
+      <nav id="sidebar" class="col-md-2">
+          <ul class="nav">
+              <li ui-sref-active="active">
+                  <a href ui-sref="home">
+                      <i class="fa fa-home"></i>
+                      Inicio
+                  </a>
+              </li>
+              <li>
+                  <a href ui-sref="brackets">
+                      <i class="fa fa-sitemap"></i>
+                      Llaves
+                  </a>
+              </li>
+              <li>
+                  <a href ui-sref="Athletes">
+                      <i class="fa fa-users"></i>
+                      Atletas
+                  </a>
+              </li>
+              <li>
+                  <a href ui-sref="Tournaments">
+                      <i class="fa fa-trophy"></i>
+                      Torneos
+                  </a>
+              </li>
+          </ul>
+      </nav>
+       </div>
+      <div id="mainContent" class="col-md-10"></div>
+  </section>
+  </body>
+</html>
